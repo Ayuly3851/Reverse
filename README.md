@@ -59,6 +59,10 @@ set lhost 192.x.x.x
 ``` msfconsole
 set lport 1337
 ```
+- Set ExitOnSession
+```
+set ExitOnSession false
+```
 - Exploit
 ``` msfconsole
 exploit -j
